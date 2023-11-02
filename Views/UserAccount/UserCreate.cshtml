@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "UserCreate";
+}
+@model UserFormIM
+
+<h1>Kullanıcı Kayıt</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Kayıt!</h3>
+                </div>
+                <form method="post">
+                    <div class="card-body">
+                        <div>
+                            <label asp-for="FirstName" class="form-label"></label>
+                            <input asp-for="FirstName" class="form-control" placeholder="Lütfen isim giriniz..." />
+                        </div>
+                        <div>
+                            <label asp-for="LastName" class="form-label"></label>
+                            <input asp-for="LastName" class="form-control" placeholder="Lütfen soyisim giriniz..." />
+                        </div>
+                        <div>
+                            <label asp-for="Email" class="form-label"></label>
+                            <input type="email" asp-for="Email" class="form-control" placeholder="Lütfen e-mail giriniz..." />
+                        </div>
+                        <div>
+                            <label asp-for="Password" class="form-label"></label>
+                            <input type="password" asp-for="Password" class="form-control" placeholder="Lütfen şifre giriniz..." />
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end" style="height:50px;">
+                        <button type="submit" class="btn btn-outline-success">Kayıt Et</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

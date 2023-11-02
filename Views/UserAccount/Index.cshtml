@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model UserInfoVM
+
+<h1>Index</h1>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Kişi Bilgisi</h3>
+        </div>
+        <div class="card-body">
+            <div>
+                <label asp-for="UserName"></label>
+                : @Model.UserName
+            </div>
+            <div>
+                <label asp-for="Email"></label>
+                : @Model.Email
+            </div>
+            <div>
+                <label asp-for="InformationText"></label>
+                : @Model.InformationText
+            </div>
+            <span>Roller: </span>
+            <ul>
+                @foreach (var role in Model.Roles)
+                {
+                    <li>@role</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+</div>

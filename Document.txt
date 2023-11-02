@@ -1,0 +1,17 @@
+﻿Route(Yönlendirme) Nedir?
+
+Gelen istekleri(Request) URL'leriyle eşleştirerek sayfa isteği işlemeyi sağlayan, rotayı belirlemek için kullanılan bir şablondur. 
+
+.NET Core'da varsayılan yönlendirme endpoint routine olarak isimlendirilir.
+
+Varsayılan yönlendirme aşağıdaki gibidir:
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+NOT: Yönlendirme, UseRouting ve UseEndpoints midlleware(ara yazılım) kullanılarak yapılandırılır. 
+
+--UseRouting ve MapControllerRoute Middleware yapısı
+
+Kullanıcı istekte bulundupunda hangi controller için çalışacağını, hangi action'ı ilgili model ile çalıştırıp response döneceğini Program.cs class'ı içerisinde UseRouting() middleware yapısı gerçekleştirir. MapControllerRoute Middleware sayesinde ise gelen isteğin hangi controller ve action'a yönlendirilmesi gerektiğini belirleriz. {controller=Home}/{action=Index}/{id?} patterni kullanıdığımızda default'ta bir rota belirlemiş oluruz. 
+
